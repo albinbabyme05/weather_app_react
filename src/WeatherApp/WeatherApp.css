@@ -7,12 +7,12 @@
     background-color: #9198e5;
   }
   .weather-app {
-    background-image: url(overcast4.jpg);
+    background-image: url(../../public/img.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     flex-direction: row;
-    width: 75%;
+    width: 90%;
     border-top-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     display: flex;
