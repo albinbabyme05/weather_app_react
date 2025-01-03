@@ -36,7 +36,25 @@ const WeatherApp =()=>{
   return(
       <div className="weather-app">
 
-        
+        <div className="weather-card-container">
+          <div className="weather-icon">
+            <img className="weather_img" src={weatherData && weatherData.current.condition.icon} width="150px" alt="" />
+          </div>
+          {weatherData && 
+            <div className="weather-card">
+              <p className="weather-temp">{weatherData.current.temp_c} °C</p>
+              <div className="weather-location">
+                <p className="weather-country">{weatherData.location.country}</p>
+                <p className="weather-region">{weatherData.location.region}</p>
+              </div>
+              <div className="weather-condition">
+                <p className="weather-condition-text">{weatherData.current.condition.text}</p>
+                <small className="weather-condition-humidity">Humidity: {weatherData.current.humidity}</small>
+                <span>Wind: {weatherData.current.wind_kph} km/h</span>
+              </div>
+            </div>
+          }
+        </div>
           <div className='search-form-container'>
             <form className='search-form' onSubmit={handleSubmit}>
               <input
