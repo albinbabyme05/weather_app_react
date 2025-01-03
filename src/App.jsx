@@ -1,13 +1,11 @@
-import { useState } from 'react'
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import WeatherApp from './WeatherApp/WeatherApp.jsx'
 
-import './App.css'
 
-function App() {
-  
 
-  return (
-    <div>Hallo</div>
-  )
-}
-
-export default App
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <WeatherApp />
+  </StrictMode>,
+)
